@@ -1,26 +1,13 @@
 #!/bin/bash
 
-export INSTALL_PATH="${PWD}/stage"
-export PKG_CONFIG_PATH="${INSTALL_PATH}/lib/pkgconfig"
-export LD_LIBRARY_PATH="${INSTALL_PATH}/lib:${INSTALL_PATH}/lib/dri:."
-export NB_JOBS="$(nproc)"
-export LIBVA_DRIVERS_PATH="${INSTALL_PATH}/lib"
 export LIBVA_DRIVER_NAME=iHD
 
-function download() {
-    URL="$1"; PKG="$2";
-    cd "${INSTALL_PATH}"
-    [ ! -f "${PKG}" ] && curl -kL -o "${PKG}" "${URL}" && tar -xvf "${PKG}"
-}
-
-mkdir -p "${INSTALL_PATH}"
-
-sudo apt install -y gcc g++ make curl pkg-config yasm nasm
-sudo apt install -y vainfo i965-va-driver xserver-xorg-video-intel xserver-xorg-core
-#sudo apt install -y libx11-dev libgl1-mesa-glx libgl1-mesa-dev
-sudo apt install -y libdrm-dev libva-dev libmfx-dev 
-#sudo apt-get install libmfx1 libmfx-tools
-
+sudo apt-get install autoconf libtool libdrm-dev xorg xorg-dev openbox libx11-dev libgl1-mesa-glx libgl1-mesa-dev
+sudo apt-get install libva-drm2 libva-x11-2 libva-wayland2 libva-glx2
+sudo apt-get install libmfx1 libmfx-tools
+sudo apt-get install libva-dev libmfx-dev
+sudo apt-get install vainfo
+sudo apt-get install intel-media-va-driver-non-free
 
 # ffmpeg
 if [ ! -f "${INSTALL_PATH}/bin/ffmpeg2" ]; then
