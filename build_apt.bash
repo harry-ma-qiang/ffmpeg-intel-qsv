@@ -8,6 +8,7 @@ sudo apt-get install libva-dev
 sudo apt-get install libmfx1 libmfx-tools libmfx-dev
 sudo apt-get install intel-media-va-driver-non-free
 sudo apt-get install vainfo
+#sudo apt-get install vainfo xserver-xorg-video-intel
 
 # ffmpeg
 if [ ! -f "${INSTALL_PATH}/bin/ffmpeg2" ]; then
