@@ -2,6 +2,8 @@
 
 export LIBVA_DRIVER_NAME=iHD
 
+sudo apt update
+
 sudo apt-get install libva-drm2 libva-x11-2 libva-wayland2 libva-glx2
 sudo apt-get install libva-dev
 sudo apt-get install libmfx1 libmfx-tools libmfx-dev
