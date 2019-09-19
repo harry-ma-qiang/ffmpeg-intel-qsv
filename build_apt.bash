@@ -4,7 +4,7 @@ export LIBVA_DRIVER_NAME=iHD
 
 sudo apt update
 
-sudo apt-get install libva-drm2 libva*
+#sudo apt-get install libva-drm2 libva*
 sudo apt-get install libva-dev
 sudo apt-get install libmfx1 libmfx-tools libmfx-dev
 sudo apt-get install i965-va-driver-shaders intel-media-va-driver-non-free
