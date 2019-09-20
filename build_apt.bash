@@ -8,7 +8,7 @@ sudo apt update
 sudo apt-get install libva-dev
 sudo apt-get install libmfx1 libmfx-tools libmfx-dev
 sudo apt-get install i965-va-driver-shaders intel-media-va-driver-non-free
-sudo apt-get install vainfo
+sudo apt-get install vainfo intel-gpu-tools
 #sudo apt-get install vainfo xserver-xorg-video-intel
 #sudo apt-get install autoconf libtool libdrm-dev xorg xorg-dev openbox libx11-dev libgl1-mesa-glx libgl1-mesa-dev
 
